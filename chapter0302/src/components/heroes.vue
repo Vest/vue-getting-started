@@ -17,31 +17,54 @@
               </div>
               <div class="field">
                 <label class="label" for="firstName">first name</label>
-                <input class="input" id="firstName" />
+                <input class="input" id="firstName" v-model="hero.firstName" />
               </div>
               <div class="field">
                 <label class="label" for="lastName">last name</label>
-                <input class="input" id="lastName" />
+                <input class="input" id="lastName" v-model="hero.lastName" />
               </div>
               <div class="field">
                 <label class="label" for="description">description</label>
-                <textarea class="input" id="description" type="text" />
+                <textarea
+                  class="input"
+                  id="description"
+                  type="text"
+                  v-model="hero.description"
+                />
               </div>
               <div class="field">
                 <label class="label">cape color</label>
                 <label class="radio" for="color-red">
-                  <input id="color-red" type="radio" value="red" />
+                  <input
+                    id="color-red"
+                    type="radio"
+                    value="red"
+                    v-model="hero.capeColor"
+                  />
                   red
                 </label>
                 <label class="radio" for="color-blue">
-                  <input id="color-blue" type="radio" value="blue" />
+                  <input
+                    id="color-blue"
+                    type="radio"
+                    value="blue"
+                    v-model="hero.capeColor"
+                  />
                   blue
                 </label>
                 <label class="radio" for="color-green">
-                  <input id="color-green" type="radio" value="green" />
+                  <input
+                    id="color-green"
+                    type="radio"
+                    value="green"
+                    v-model="hero.capeColor"
+                  />
                   green
                 </label>
-                <div class="color-line"></div>
+                <div
+                  class="color-line"
+                  :style="{ 'background-color': hero.capeColor }"
+                ></div>
               </div>
               <div class="field">
                 <label for="power">
@@ -60,7 +83,12 @@
               <div class="field">
                 <label class="checkbox" for="active">
                   active
-                  <input class="is-primary" id="active" type="checkbox" />
+                  <input
+                    class="is-primary"
+                    id="active"
+                    type="checkbox"
+                    v-model="hero.active"
+                  />
                 </label>
               </div>
             </div>
