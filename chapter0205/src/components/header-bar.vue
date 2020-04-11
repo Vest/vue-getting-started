@@ -1,9 +1,9 @@
 <template>
   <header>
     <nav
+      aria-label="main navigation"
       class="navbar has-background-dark is-dark"
       role="navigation"
-      aria-label="main navigation"
     >
       <HeaderBarBrand></HeaderBarBrand>
       <HeaderBarLinks></HeaderBarLinks>
@@ -20,3 +20,9 @@ export default {
   components: { HeaderBarBrand, HeaderBarLinks },
 };
 </script>
+
+<style lang="scss" scoped>
+.foo {
+  color: white;
+}
+</style>
