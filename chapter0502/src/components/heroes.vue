@@ -113,7 +113,7 @@ export default {
   name: 'Heroes',
   data() {
     return {
-      heroes: [],
+      heroes: ourHeroes,
       selectedHero: undefined,
       message: '',
     };
