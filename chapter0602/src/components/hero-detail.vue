@@ -18,7 +18,7 @@
               class="input"
               id="firstName"
               name="firstName"
-              v-model="hero.firstName"
+              v-model="clonedHero.firstName"
             />
           </div>
           <div class="field">
@@ -27,7 +27,7 @@
               class="input"
               id="lastName"
               name="lastName"
-              v-model="hero.lastName"
+              v-model="clonedHero.lastName"
             />
           </div>
           <div class="field">
@@ -36,7 +36,7 @@
               class="input"
               id="description"
               name="description"
-              v-model="hero.description"
+              v-model="clonedHero.description"
             />
           </div>
           <div class="field">
@@ -45,7 +45,7 @@
               class="input"
               id="originDate"
               type="date"
-              v-model="hero.originDate"
+              v-model="clonedHero.originDate"
             />
             <p class="comment">
               My origin story began on
@@ -59,7 +59,7 @@
               name="capeCounter"
               id="capeCounter"
               type="number"
-              v-model="hero.capeCounter"
+              v-model="clonedHero.capeCounter"
             />
           </div>
           <div class="field">
@@ -95,6 +95,7 @@ export default {
   data() {
     return {
       capeMessage: '',
+      clonedHero: { ...this.hero },
     };
   },
 
@@ -129,7 +130,9 @@ export default {
 
   computed: {
     fullName() {
-      return this.hero ? `${this.hero.firstName} ${this.hero.lastName}` : '';
+      return this.clonedHero
+        ? `${this.clonedHero.firstName} ${this.clonedHero.lastName}`
+        : '';
     },
   },
 
@@ -140,11 +143,11 @@ export default {
   },
 
   watch: {
-    'hero.capeCounter': {
+    'clonedHero.capeCounter': {
       immediate: true,
       handler(newValue, oldValue) {
         console.log(
-          `CapeCounter watcher evalauted. old=${oldValue}, new=${newValue}`,
+          `CapeCounter watcher evaluated. old=${oldValue}, new=${newValue}`,
         );
         this.handleTheCapes(newValue);
       },
