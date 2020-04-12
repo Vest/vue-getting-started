@@ -100,8 +100,12 @@ export default {
   },
 
   methods: {
-    cancelHero() {},
-    saveHero() {},
+    cancelHero() {
+      this.$emit('cancel');
+    },
+    saveHero() {
+      this.$emit('save', this.clonedHero);
+    },
     handleTheCapes(newValue) {
       const value = parseInt(newValue, 10);
       switch (value) {
