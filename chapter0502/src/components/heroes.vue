@@ -10,11 +10,11 @@
             <p class="card-header-title">heroes list</p>
           </header>
           <ul class="list is-hoverable">
-            <li v-for="hero in heroes" :key="hero.id">
+            <li :key="hero.id" v-for="hero in heroes">
               <a
-                class="list-item"
-                @click="selectHero(hero)"
                 :class="{ 'is-active': selectedHero === hero }"
+                @click="selectHero(hero)"
+                class="list-item"
               >
                 <span>{{ hero.firstName }}</span>
               </a>
@@ -65,13 +65,13 @@
           </div>
           <footer class="card-footer">
             <button
-              class="link card-footer-item cancel-button"
               @click="cancelHero()"
+              class="link card-footer-item cancel-button"
             >
               <i class="fas fa-undo"></i>
               <span>Cancel</span>
             </button>
-            <button class="link card-footer-item" @click="saveHero()">
+            <button @click="saveHero()" class="link card-footer-item">
               <i class="fas fa-save"></i>
               <span>Save</span>
             </button>
@@ -112,8 +112,9 @@ const ourHeroes = [
 export default {
   name: 'Heroes',
   data() {
+    console.log('data method was called');
     return {
-      heroes: ourHeroes,
+      heroes: [],
       selectedHero: undefined,
       message: '',
     };
@@ -123,7 +124,26 @@ export default {
       return `${this.selectedHero.firstName} ${this.selectedHero.lastName}`;
     },
   },
+  created() {
+    console.log('created event was triggered');
+    this.loadHeroes();
+  },
   methods: {
+    async getHeroes() {
+      console.log('getHeroes started');
+      return new Promise(function (resolve) {
+        setTimeout(() => {
+          console.log('getHeroes finished');
+          resolve(ourHeroes);
+        }, 1500);
+      });
+    },
+    async loadHeroes() {
+      this.heroes = [];
+      this.message = 'getting the heroes. please be patient';
+      this.heroes = await this.getHeroes();
+      this.message = '';
+    },
     handleTheCapes(newValue) {
       const value = parseInt(newValue, 10);
       switch (value) {
