@@ -13,7 +13,7 @@
             <a
               class="list-item"
               @click="selectedHero = hero"
-              :class="{ 'is-active': selectedHero == hero }"
+              :class="{ 'is-active': selectedHero === hero }"
             >
               <span>{{ hero.firstName }}</span>
             </a>
