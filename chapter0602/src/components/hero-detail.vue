@@ -9,7 +9,7 @@
           <div class="field">
             <label class="label" for="id">id</label>
             <label class="input" id="id" name="id" readonly>{{
-              hero.id
+              clonedHero.id
             }}</label>
           </div>
           <div class="field">
@@ -49,7 +49,7 @@
             />
             <p class="comment">
               My origin story began on
-              {{ hero.originDate | shortDate }}
+              {{ clonedHero.originDate | shortDate }}
             </p>
           </div>
           <div class="field">
