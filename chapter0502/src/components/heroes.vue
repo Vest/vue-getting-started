@@ -131,7 +131,7 @@ export default {
   methods: {
     async getHeroes() {
       console.log('getHeroes started');
-      return new Promise(function (resolve) {
+      return new Promise(resolve => {
         setTimeout(() => {
           console.log('getHeroes finished');
           resolve(ourHeroes);
