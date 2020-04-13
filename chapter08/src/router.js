@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Heroes from './views/heroes.vue';
+import Heroes from '@/views/heroes.vue';
 
 Vue.use(Router);
 
