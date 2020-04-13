@@ -5,11 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/chapter0202/chapter0202.iml" filepath="$PROJECT_DIR$/chapter0202/chapter0202.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter0204/chapter0204.iml" filepath="$PROJECT_DIR$/chapter0204/chapter0204.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter0205/chapter0205.iml" filepath="$PROJECT_DIR$/chapter0205/chapter0205.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter0302/chapter0302.iml" filepath="$PROJECT_DIR$/chapter0302/chapter0302.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter0402/chapter0402.iml" filepath="$PROJECT_DIR$/chapter0402/chapter0402.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter0502/chapter0502.iml" filepath="$PROJECT_DIR$/chapter0502/chapter0502.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter0602/chapter0602.iml" filepath="$PROJECT_DIR$/chapter0602/chapter0602.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter0702/chapter0702.iml" filepath="$PROJECT_DIR$/chapter0702/chapter0702.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter03/chapter03.iml" filepath="$PROJECT_DIR$/chapter03/chapter03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter04/chapter04.iml" filepath="$PROJECT_DIR$/chapter04/chapter04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter05/chapter05.iml" filepath="$PROJECT_DIR$/chapter05/chapter05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter06/chapter06.iml" filepath="$PROJECT_DIR$/chapter06/chapter06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter07/chapter07.iml" filepath="$PROJECT_DIR$/chapter07/chapter07.iml" />
     </modules>
   </component>
 </project>
