@@ -31,9 +31,27 @@ const mutations = {
 };
 
 const actions = {
+  // actions let us get to context which contains
+  // { state, getters, commit, dispatch }
+
   async getHeroesAction({ commit }) {
     const heroes = await dataService.getHeroes();
     commit(GET_HEROES, heroes);
+  },
+
+  async addHeroAction({ commit }, hero) {
+    const addedHero = await dataService.addHero(hero);
+    commit(ADD_HERO, addedHero);
+  },
+
+  async deleteHeroAction({ commit }, hero) {
+    const deletedHeroId = await dataService.deleteHero(hero);
+    commit(DELETE_HERO, deletedHeroId);
+  },
+
+  async updateHeroAction({ commit }, hero) {
+    const updatedHero = await dataService.updateHero(hero);
+    commit(UPDATE_HERO, updatedHero);
   },
 };
 
